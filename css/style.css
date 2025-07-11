@@ -5,9 +5,10 @@
 }
 
 
-.col-12 {
-margin-bottom: 10px;
-height: auto;
-border: 1px solid black;
-background-color: rgb(112, 93, 130);
+.bg-violet {
+background-color: rgb(182, 165, 198);
+}
+
+.height-100 {
+  height: 100px;
 }
