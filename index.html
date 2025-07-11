@@ -10,7 +10,7 @@
 <body>
 
   <!-- inserimento delle informazioni utente -->
-<div class="container my-5">
+<div class="container my-5 bg-secondary">
 <div class="row">
 <div class="col-12 d-flex justify-content-center">
 <p class="fs-1">Calcola il prezzo del tuo biglietto</p>
@@ -19,10 +19,14 @@
 <div class="box d-flex justify-content-around">
 <div class="col-3 mb-3">  <label for="name" class="form-label">Nome Cognome</label>
     <input type="text" class="form-control" id="name"> </div>
+
+
 <div class="col-3 mb-3">
 <label for="km" class="form-label">Km da percorrere</label>
     <input type="number" class="form-control" id="km">
 </div>
+
+
 <div class="col-3 mb-3">
    <label for="age" class="form-label">Fascia di età</label>
 <select class="form-select" id="age">
@@ -32,36 +36,30 @@
   <option value="5">Maggiorenne</option>
 </select>
 
-</div></div>
+</div>
+</div>
 
+<!-- bottoni -->
 <div class="box mb-3 d-flex justify-content-center">
 <div class="col-3 px-2"><input class="btn btn-primary w-100" type="submit" value="Calcola">
 </div>
 <div class="col-3 px-2"><input class="btn btn-primary w-100" type="reset" value="Reset">
-</div></div>
-
-
 </div>
-
-
-
-
-
-<!-- divisione delle sezioni -->
-
+</div>
+</div>
 
 <!-- riepilogo delle informazioni inserite -->
 <div class="row">
 <div class="col-12 d-flex justify-content-center">
 <p class="fs-1">Il tuo biglietto</p>
-</div> </div>
-
-
-<div class="row">
-<div id="results">risultati</div>
+</div>
 </div>
 
 
+<!-- risultati -->
+<div class="row">
+<div id="results d-flex justify-content-around"></div>
+</div>
 </div>
   
 
