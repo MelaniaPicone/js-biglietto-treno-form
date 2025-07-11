@@ -23,17 +23,17 @@
 
 <div class="col-3 mb-3">
 <label for="km" class="form-label">Km da percorrere</label>
-    <input type="number" class="form-control" id="km">
+    <input type="number" class="form-control" id="kmRun">
 </div>
 
 
 <div class="col-3 mb-3">
    <label for="age" class="form-label">Fascia di età</label>
-<select class="form-select" id="age">
+<select class="form-select" id="agePass">
   <option value="">Seleziona</option>
-  <option value="3">Under 18</option>
-  <option value="4">Over 65</option>
-  <option value="5">Maggiorenne</option>
+  <option value="1">Under 18</option>
+  <option value="2">Over 65</option>
+  <option value="3">Maggiorenne</option>
 </select>
 
 </div>
@@ -41,9 +41,9 @@
 
 <!-- bottoni -->
 <div class="box mb-3 d-flex justify-content-center">
-<div class="col-3 px-2"><input class="btn btn-primary w-100" type="submit" value="Calcola">
+<div class="col-3 px-2"><input id="calculate" class="btn btn-primary w-100" type="submit" value="Calcola">
 </div>
-<div class="col-3 px-2"><input class="btn btn-primary w-100" type="reset" value="Reset">
+<div class="col-3 px-2"><input id="reset" class="btn btn-primary w-100" type="reset" value="Reset">
 </div>
 </div>
 </div>
@@ -58,7 +58,7 @@
 
 <!-- risultati -->
 <div class="row height-100">
-<div id="results pt-2 d-flex justify-content-around"></div>
+<div id="results" class="pt-2 d-flex justify-content-around"></div>
 </div>
 </div>
   

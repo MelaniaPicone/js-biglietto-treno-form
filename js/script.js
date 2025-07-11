@@ -1,50 +1,49 @@
-
 // recupero dei pulsanti
 const calculate = document.getElementById('calculate');
 const reset = document.getElementById('reset');
 
-//recupero risultato
+// recupero risultato
 const results = document.getElementById('results');
 
 // numero random biglietto
-const generateRandomTicketNumber = (min,max) => {
-return Math.floor(Math.random() * (max - min +1)) +min;
+const generateRandomTicketNumber = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // evento "calcola" al click
-
 calculate.addEventListener('click', (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
+  const name = document.getElementById('name').value;
+  const km = parseFloat(document.getElementById('kmRun').value);
+  const age = document.getElementById('agePass').value;
 
-const nameValue = document.getElementById('name').value;
-const kmRun = document.getElementById('km').value;
-const agePass = document.getElementById ('age').value;
-}
+  const basePrice = 0.21 * km;
+  let finalPrice;
 
+  if (age === '1') {
+    finalPrice = basePrice * 0.8;
+  } else if (age === '2') {
+    finalPrice = basePrice * 0.6;
+  } else {
+    finalPrice = basePrice;
+  }
 
-// calcolo prezzo
+  const ticketNumber = generateRandomTicketNumber(10000, 99999);
 
-const basePrice = 0.21 * kmRun;
-let finalPrice;
-
-if (agePass < '1') {
-  finalPrice = basePrice * 0.8;
-}
-
-else if (agePass === '2') {
-  finalPrice = basePrice *0.6;
-}
-else {
-  finalPrice = baseprice;
-}
-
-const ticketNumber = generateRandomTicketNumber(1000,99999);
-
-results.innerText = `Nome: ${nameValue}
+  results.innerText =
+    `Nome: ${name}
 Numero biglietto: ${ticketNumber}
-Km percorsi: ${kmRun}
-Età passeggero: ${agePass}
+Km percorsi: ${km}
+Età passeggero: ${age}
 Prezzo finale: € ${finalPrice.toFixed(2)}`;
+});
 
-
+// reset
+reset.addEventListener('click', (e) => {
+  e.preventDefault();
+  results.innerText = "";
+  document.getElementById('name').value = '';
+  document.getElementById('kmRun').value = '';
+  document.getElementById('agePass').value = '';
+});
