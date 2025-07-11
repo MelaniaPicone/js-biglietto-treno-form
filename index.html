@@ -10,71 +10,58 @@
 <body>
 
   <!-- inserimento delle informazioni utente -->
-<div class="container margin-top">
+<div class="container my-5">
 <div class="row">
-  <div class="bg">
-
-<div class="col-12 margin-top d-flex justify-content-center">
+<div class="col-12 d-flex justify-content-center">
 <p class="fs-1">Calcola il prezzo del tuo biglietto</p>
 </div>
 
-<div class="col-12 d-flex justify-content-around">
-<div class="col-3 mb-3 align-content-center">  <label for="name" class="form-label">Nome Cognome</label>
-    <input type="text" class="form-control" id="name" aria-describedby="name"> </div>
-<div class="col-3 mb-3 align-content-center">
-<label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+<div class="box d-flex justify-content-around">
+<div class="col-3 mb-3">  <label for="name" class="form-label">Nome Cognome</label>
+    <input type="text" class="form-control" id="name"> </div>
+<div class="col-3 mb-3">
+<label for="km" class="form-label">Km da percorrere</label>
+    <input type="number" class="form-control" id="km">
 </div>
-<div class="col-3 mb-3 align-content-center">
+<div class="col-3 mb-3">
    <label for="age" class="form-label">Fascia di età</label>
-<select class="form-select" aria-label="morover">
-  <option value="1"></option>
-  <option value="3">maggiorenne</option>
-  <option value="4">minorenne</option>
-  <option value="5">over 65</option>
+<select class="form-select" id="age">
+  <option value="">Seleziona</option>
+  <option value="3">Under 18</option>
+  <option value="4">Over 65</option>
+  <option value="5">Maggiorenne</option>
 </select>
 
-</div>
-</div>
+</div></div>
 
-<div class="col-12 d-flex justify-content-center">
-<div class="col-2 align-content-center"><input class="btn btn-primary" type="submit" value="Submit">
+<div class="box mb-3 d-flex justify-content-center">
+<div class="col-3 px-2"><input class="btn btn-primary w-100" type="submit" value="Calcola">
 </div>
-<div class="col-2 align-content-center"><input class="btn btn-primary" type="reset" value="Reset">
-</div>
-
-
-</div>
+<div class="col-3 px-2"><input class="btn btn-primary w-100" type="reset" value="Reset">
+</div></div>
 
 
 </div>
-</div>
+
+
+
+
 
 <!-- divisione delle sezioni -->
 
 
 <!-- riepilogo delle informazioni inserite -->
 <div class="row">
-<div class="bg">
 <div class="col-12 d-flex justify-content-center">
-<p class="fs-3">Il tuo biglietto</p>
+<p class="fs-1">Il tuo biglietto</p>
+</div> </div>
+
+
+<div class="row">
+<div id="results">risultati</div>
 </div>
 
 
-
-<div class="col-12 margin-bottom d-flex justify-content-around">
-
-<div class="col-4">Nome passeggero</div>
-<div class="col-2">Offerta</div>
-<div class="col-2">Carrozza</div>
-<div class="col-2">Codice CP</div>
-<div class="col-2">Prezzo biglietto</div>
-</div>
-
-
-
-</div>
-</div>
 </div>
   
 
